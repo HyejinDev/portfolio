@@ -1,0 +1,35 @@
+.www {
+    background-color: blueviolet;/*배경색 변경*/
+    float: left;
+    border-width: 20px; /*네 면 테두리의 너비를 설정*/
+    border-color: black;
+}
+.qqq {
+    background-color: brown;
+    float: left;
+}
+.ddd {
+    background-color: aquamarine;
+    float: left;
+}
+.www h1 {
+  color: blue;
+}
+div h3 {
+    color: blueviolet;
+}
+h1 {
+    color: red;
+}
+.head h1 {
+    color: rgba(238, 0, 255, 0.861);
+}
+.sss {
+    background-color: aquamarine;
+    float: left;
+    width: 100%; /*넓이*/
+    /* height: 40%; 높이*/
+    border: 3px solid rgba(0, 0, 0, 0.177);
+    border-bottom: 0px;
+
+}

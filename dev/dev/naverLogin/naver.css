@@ -1,0 +1,67 @@
+.최상위태그 {
+    width: 460px;
+    margin: 0 auto;
+    border: 2px solid rgba(0, 0, 0, 0.177);
+    border-radius: 10px;
+}
+.로그인태그 {
+    display: flex;
+    justify-content: center;
+    height: 61px;
+}
+.ID로그인 {
+    /* border-bottom: 0px; */
+    /* border-right: 0px; */
+    float: left;
+    width:33%;
+    text-align: center;
+}
+.일회용번호 {
+    border-bottom: 0px;
+    /* border-right: 0px; */
+    border: 2px solid rgba(0, 0, 0, 0.177);
+    border-top: 0px;
+    border-bottom-left-radius: 10px;
+    float: left;
+    width:33%;
+    text-align: center;
+}
+.QR코드 {
+    float: left;
+    width:33%;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.177);
+}
+.아이디비번컨테이너 {
+    display: flex;
+    flex: 1;
+    height: 220px;
+    flex-direction: column;
+    padding: 30px;
+}
+.아이디비번 {
+    border: 2px solid rgba(0, 0, 0, 0.177);
+    flex: 0.5;
+    border-radius: 10px;
+}
+.로그인컨테이너 {
+    /* border: 2px solid rgba(0, 0, 0, 0.177); */
+    flex: 0.5;
+    justify-content: space-between;
+    display: flex;
+}
+.ID {
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.177);
+}
+.PW {
+    width: 100%;
+    height: 50%;
+}
+.로그인 {
+    background-color: rgb(0, 211, 28);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
