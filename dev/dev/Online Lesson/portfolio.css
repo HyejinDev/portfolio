@@ -1,426 +1,496 @@
 /* COMMON */
 * {
-    margin: 0;
-    padding: 0;
-    font-size: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
 }
 
 body {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    word-break: break-all;
-    font-family: 'Heebo', sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  word-break: break-all;
+  font-family: "Heebo", sans-serif;
 }
 
 img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 a {
-    text-decoration: none;
-    font-size: 14px;
-    text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 /* HEADER */
 .header-area {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99;
-    background-color: white;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: white;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navber-fade {
-    animation-name: navbar-fade;
-    animation-duration: 0.5s;
-    -webkit-animation-name: navber-fade;
-    -webkit-animation-duration: 0.5s;
+  animation-name: navbar-fade;
+  animation-duration: 0.2s;
+  -webkit-animation-name: navber-fade;
+  -webkit-animation-duration: 0.2s;
 }
 
 @keyframes navber-fade {
-    from { opacity: .4}
-    to { opacity: 1 }
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes navber-fade {
-    from { opacity: .4}
-    to { opacity: 1 }
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .header-area.navber-fixed {
-    position: fixed;
+  position: fixed;
 }
 
 .header-area > .navber {
-    width: calc(100% - 120px);
-    margin: 0 60px;
-    overflow: hidden;
+  width: calc(100% - 120px);
+  margin: 0 60px;
+  overflow: hidden;
 }
 
 @media (min-width: 992px) {
-    .header-area > .navber {
-        max-width: 900px;
-        margin: 0 auto;
-    }
+  .header-area > .navber {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1200px) {
-    .header-area > .navber {
-        max-width: 1000px;
-    }
+  .header-area > .navber {
+    max-width: 1000px;
+  }
 }
 
 .header-area > .navber > .navber-brand {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 32px;
-    cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  cursor: pointer;
 }
 
 .header-area > .navber > .navber-toggler * {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .header-area > .navber > .navber-toggler {
-    float: right;
-    height: 70px;
-    line-height: 70px;
-    font-size: 32px;
-    cursor: pointer;
+  float: right;
+  height: 70px;
+  line-height: 70px;
+  font-size: 32px;
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {
-    .header-area > .navber > .navber-toggler {
-        display: none;
-    }
+  .header-area > .navber > .navber-toggler {
+    display: none;
+  }
 }
 
 .header-area > .navber > .navber-menu {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    top: 70px;
-    left: 0;
-    width: 100%;
-    height: 0;
-    transition: 0.5s ease;
-    overflow: hidden;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  overflow: hidden;
 }
 
 .header-area > .navber > .navber-menu.show {
-    height: 200px;
+  height: 200px;
 }
 
 .header-area > .navber > .navber-menu > .nav-item {
-    float: none;
-    display: block;
-    height: 50px;
-    line-height: 50px;
+  float: none;
+  display: block;
+  height: 50px;
+  line-height: 50px;
 }
 
 .header-area > .navber > .navber-menu > .nav-item:hover * {
-    background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .header-area > .navber > .navber-menu > .nav-item > .nav-link {
-    display: block;
-    padding-left: 50px;
-    color: white;
-    cursor: pointer;
+  display: block;
+  padding-left: 50px;
+  color: white;
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {
-    .header-area > .navber > .navber-menu {
-        position: relative;
-        background-color: transparent;
-        float: right;
-        top: 0;
-        width: auto;
-        height: auto;
-        transition: none;
-    }
+  .header-area > .navber > .navber-menu {
+    position: relative;
+    background-color: transparent;
+    float: right;
+    top: 0;
+    width: auto;
+    height: auto;
+    transition: none;
+  }
 
-    .header-area > .navber > .navber-menu.show {
-        height: auto;
-    }
+  .header-area > .navber > .navber-menu.show {
+    height: auto;
+  }
 
-    .header-area > .navber > .navber-menu > .nav-item {
-        display: inline-block;
-        height: 70px;
-        line-height: 70px;
-    }
+  .header-area > .navber > .navber-menu > .nav-item {
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
+  }
 
-    .header-area > .navber > .navber-menu > .nav-item:hover * {
-        background-color: transparent;
-    }
+  .header-area > .navber > .navber-menu > .nav-item:hover * {
+    background-color: transparent;
+  }
 
-    .header-area > .navber > .navber-menu > .nav-item > .nav-link {
-        display: block;
-        padding: 0 20px;
-        color: black;
-    }
+  .header-area > .navber > .navber-menu > .nav-item > .nav-link {
+    display: block;
+    padding: 0 20px;
+    color: black;
+  }
 }
 
 /* SECTION CONTA */
 .section-container {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* WELCOME AREA */
 .welcome-area {
-    height: auto;
+  height: auto;
 }
 
 .welcome-area > .container {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
 
-.welcome-area > .container > .image-slide{
-    height: 100%;
+.welcome-area > .container > .image-slide {
+  height: 100%;
 }
 
 .welcome-area > .container > .image-prev,
 .welcome-area > .container > .image-next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transform: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transform: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 .welcome-area > .container > .image-next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 .welcome-area > .container > .image-prev:hover,
 .welcome-area > .container > .image-next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .welcome-area > .container > .dots {
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-    text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  text-align: center;
 }
 
 .welcome-area > .container > .dots > .dot {
-    cursor: pointer;
-    height: 4px;
-    width: 30px;
-    margin: 0 2px;
-    background-color: #717171;
-    display: inline-block;
-    transition: background-colro 0.6 ease;
+  cursor: pointer;
+  height: 4px;
+  width: 30px;
+  margin: 0 2px;
+  background-color: #717171;
+  display: inline-block;
+  transition: background-colro 0.6 ease;
 }
 
 .welcome-area > .container > .dots > .dot.active,
 .welcome-area > .container > .dots > .dot:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .welcome-area > .container > .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
 }
 
 @keyframes fade {
-    from { opacity: .4}
-    to { opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fade {
-    from { opacity: .4}
-    to { opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* SECTION */
 section {
-    padding: 100px 0;
+  padding: 100px 0;
 }
 
 .title {
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 3px;
-    padding-bottom: 100px;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 3px;
+  padding-bottom: 100px;
 }
 
 .title::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 10px;
-    margin: 0 auto;
-    background-image: linear-gradient(to right,pink, rgb(255, 78, 107));
+  content: "";
+  display: block;
+  width: 100px;
+  height: 10px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, pink, rgb(255, 78, 107));
 }
 
 /* ABOUT AREA */
 .about-area {
-    height: auto;
-    position: relative;
+  height: auto;
+  position: relative;
 }
 
 .about-area > .picture {
-    display: block;
-    text-align: center;
-    padding: 20px;
+  display: block;
+  text-align: center;
+  padding: 20px;
 }
 
-@media (min-width: 992px){
-    .about-area > .picture {
-        width: calc(40% - 40px);
-        display: inline-block;
-    }
+@media (min-width: 992px) {
+  .about-area > .picture {
+    width: calc(40% - 40px);
+    display: inline-block;
+  }
 }
 
 .about-area > .picture > img {
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 15px;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 15px;
 }
 
 .about-area > .picture > .name {
-    font-size: 25px;
-    text-align: center;
-    padding: 15px 0;
+  font-size: 25px;
+  text-align: center;
+  padding: 15px 0;
 }
 
 .about-area > .picture > .description {
-    font-size: 14px;
-    font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .about-area > .text {
-    display: block;
-    padding: 30px;
+  display: block;
+  padding: 30px;
 }
 
 @media (min-width: 992px) {
-    .about-area > .text {
-        width: calc(60% - 100px);
-        display: inline-block;
-        padding: 0 50px;
-    }
+  .about-area > .text {
+    width: calc(60% - 100px);
+    display: inline-block;
+    padding: 0 50px;
+  }
 }
 
 .about-area > .text * {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .about-area > .text > .intro {
-    padding: 20px 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    letter-spacing: 1.5px;
+  padding: 20px 0;
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 1.5px;
 }
 
 .about-area > .text > ul {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .about-area > .text > ul > li {
-    height: 40px;
+  height: 40px;
 }
 
 .about-area > .text > ul > li > .info {
-    clear: #777;
+  clear: #777;
 }
 
 .about-area > .text > ul > li > .info > i {
-    color: pink;
+  color: pink;
 }
 
 .about-area > .text > .sns {
-    text-align: right;
+  text-align: right;
 }
 
 @media (min-width: 992px) {
-    .about-area > .text > .sns {
-        text-align: left;
-    }
+  .about-area > .text > .sns {
+    text-align: left;
+  }
 }
 
 .about-area > .text > .sns > a {
-    width: 50px;
-    line-height: 50px;
-    background-color: #eee;
-    border-radius: 5px;
-    font-size: 16px;
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
+  width: 50px;
+  line-height: 50px;
+  background-color: #eee;
+  border-radius: 5px;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
 }
 
 .about-area > .text > .sns > a:hover {
-    background-image: linear-gradient(to right,pink, rgb(255, 78, 107));
+  background-image: linear-gradient(to right, pink, rgb(255, 78, 107));
 }
 
 /* SERVICES AREA */
 .services-area {
-    height: auto;
-    background-color: #f9f9ff;
+  height: auto;
+  background-color: #f9f9ff;
 }
 
 .about-area > .container {
-    text-align: center;
+  text-align: center;
 }
 
 .services-area > .container > .item {
-    height: auto;
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    text-align: left;
-    transition: all 0.5s ease;
+  height: auto;
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  text-align: left;
+  transition: all 0.5s ease;
 }
 
 .services-area > .container > .item:hover {
-    transform: scale(1.015);
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.015);
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .services-area > .container > .item > .icon {
-    padding: 10px 0;
-    display: inline-block;
+  padding: 10px 0;
+  display: inline-block;
 }
 
 .services-area > .container > .item > .icon > span > i {
-    font-size: 48px;
-    clear: #aaa;
+  font-size: 48px;
+  clear: #aaa;
 }
 
 .services-area > .container > .item > .service {
-    font-size: 32px;
-    font-weight: bold;
-    padding: 10px 0;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 10px 0;
 }
 
 .services-area > .container > .item > .content {
-    font-size: 16px;
-    font-family: 'Noto Sans KR', sans-serif;
-    letter-spacing: 1.5px;
-    padding: 10px 0;
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 1.5px;
+  padding: 10px 0;
+}
+
+/* PORTFOLIO AREA */
+.portfolio-area {
+  height: auto;
+}
+
+.portfolio-area > .filter > .list {
+  text-align: center;
+}
+
+.portfolio-area > .filter > .list > .listItem {
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.portfolio-area > .filter > .list > .listItem:hover,
+.portfolio-area > .filter > .list > .listItem.active {
+  color: rgb(255, 78, 107);
+}
+
+.portfolio-area > .container {
+  padding-top: 50px;
+}
+
+.portfolio-area > .container > .filterItem {
+  display: inline-block;
+  width: calc(100% - 40px);
+  /* margin: 20px; */
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .portfolio-area > .container > .filterItem {
+    width: calc(50% - 40px);
+  }
+}
+
+.portfolio-area > .container > .filterItem.show {
+  display: inline-block;
+}
+
+.portfolio-area > .container > .filterItem > .image {
+  position: relative;
+  max-height: 700px;
+}
+
+@media (min-width: 992px) {
+  .portfolio-area > .container > .filterItem > .image {
+    height: 300px;
+  }
 }
