@@ -603,3 +603,46 @@ section {
   font-size: 16px;
   clear: #bbb;
 }
+
+/* REVIEW AREA */
+.review-area {
+  height: auto;
+  background-color: #f9f9ff;
+}
+
+.review-area > .container {
+  position: relative;
+  text-align: center;
+  background-color: white;
+  margin: 20px;
+  padding: 40px;
+}
+
+@media (min-width: 992px) {
+  .review-area > .container {
+    padding: 20px 0;
+  }
+}
+
+.review-area > .container > .review-prev,
+.review-area > .container > .review-next {
+  display: inline-block;
+  position: absolute;
+  top: 50px;
+  transform: translateY(-50%);
+  color: gray;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.review-area > .container > .review-prev {
+  left: 0;
+}
+
+.review-area > .container > .review-next {
+  right: 0;
+}
