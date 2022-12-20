@@ -10,8 +10,8 @@ function scrollfunction() {
   var header = document.getElementById("header");
 
   if (document.documentElement.scrollTop > 70) {
-    if (!header.classList.contains("navber-fixde")) {
-      header.classList.add("navber-fixed");
+    if (!header.classList.contains("navbar-fixde")) {
+      header.classList.add("navbar-fixed");
       document.getElementsByTagName("body")[0].style.marginTop = "70px";
       header.style.display = "none";
       setTimeout(function () {
@@ -19,8 +19,8 @@ function scrollfunction() {
       }, 40);
     }
   } else {
-    if (header.classList.contains("navber-fixed")) {
-      header.classList.remove("navber-fixde");
+    if (header.classList.contains("navbar-fixed")) {
+      header.classList.remove("navbar-fixde");
       document.getElementsByTagName("body")[0].style.marginTop = "0";
     }
   }
@@ -179,3 +179,78 @@ var filterItems = document.getElementsByClassName("overlay");
 for (var i = 0; i < filterItems.length; i++) {
   filterItems[i].addEventListener("click", viewportfolio);
 }
+
+/* REVIEW AREA */
+var reviewSlideIndex = 0;
+
+function reviewSlideTimer() {
+  plusReviewSlides(1);
+}
+
+var reviewTimer = setInterval(reviewSlideTimer, 3000);
+
+function plusReviewSlides(n) {
+  clearInterval(reviewTimer);
+  reviewTimer = setInterval(reviewSlideTimer, 3000);
+  showReviewSlides((reviewSlideIndex += n));
+}
+
+function showReviewSlides(n) {
+  var i;
+  var review_slides = document.getElementsByClassName("review-slide");
+
+  if (n > review_slides.length - 3) {
+    reviewSlideIndex = 0;
+  }
+
+  if (n < 0) {
+    reviewSlideIndex = review_slides.length - 3;
+  }
+
+  for (i = 0; i < review_slides.length; i++) {
+    removeClass(review_slides[i], "show");
+    removeClass(review_slides[i], "res-show");
+    addClass(review_slides[i], "hide");
+  }
+
+  removeClass(review_slides[reviewSlideIndex], "hide");
+  addClass(review_slides[reviewSlideIndex], "res-show");
+  removeClass(review_slides[reviewSlideIndex + 1], "hide");
+  addClass(review_slides[reviewSlideIndex + 1], "show");
+  removeClass(review_slides[reviewSlideIndex + 2], "hide");
+  addClass(review_slides[reviewSlideIndex + 2], "show");
+}
+
+document
+  .getElementById("reviewPrev")
+  .addEventListener("click", plusReviewSlides.bind(null, -1));
+document
+  .getElementById("reviewNext")
+  .addEventListener("click", plusReviewSlides.bind(null, 1));
+
+/* NAVBAR ANCHOR */
+function moveTo(id) {
+  if (id == "brand") {
+    window.scrollTo(0, 0);
+  } else {
+    window.scrollTo(0, document.getElementById(id).offsetTop - 70);
+  }
+
+  document.getElementById("menu").classList.remove("show");
+}
+
+document
+  .getElementById("navbarBrand")
+  .addEventListener("click", moveTo.bind(null, "brand"));
+document
+  .getElementById("navbarAbout")
+  .addEventListener("click", moveTo.bind(null, "about"));
+document
+  .getElementById("navbarService")
+  .addEventListener("click", moveTo.bind(null, "service"));
+document
+  .getElementById("navbarPortfolio")
+  .addEventListener("click", moveTo.bind(null, "portfolio"));
+document
+  .getElementById("navbarReview")
+  .addEventListener("click", moveTo.bind(null, "review"));

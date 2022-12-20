@@ -39,14 +39,14 @@ ul {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 
-.navber-fade {
+.navbar-fade {
   animation-name: navbar-fade;
   animation-duration: 0.2s;
-  -webkit-animation-name: navber-fade;
+  -webkit-animation-name: navbar-fade;
   -webkit-animation-duration: 0.2s;
 }
 
-@keyframes navber-fade {
+@keyframes navbar-fade {
   from {
     opacity: 0.4;
   }
@@ -55,7 +55,7 @@ ul {
   }
 }
 
-@-webkit-keyframes navber-fade {
+@-webkit-keyframes navbar-fade {
   from {
     opacity: 0.4;
   }
@@ -64,30 +64,30 @@ ul {
   }
 }
 
-.header-area.navber-fixed {
+.header-area.navbar-fixed {
   position: fixed;
 }
 
-.header-area > .navber {
+.header-area > .navbar {
   width: calc(100% - 120px);
   margin: 0 60px;
   overflow: hidden;
 }
 
 @media (min-width: 992px) {
-  .header-area > .navber {
+  .header-area > .navbar {
     max-width: 900px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 1200px) {
-  .header-area > .navber {
+  .header-area > .navbar {
     max-width: 1000px;
   }
 }
 
-.header-area > .navber > .navber-brand {
+.header-area > .navbar > .navbar-brand {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -96,11 +96,11 @@ ul {
   cursor: pointer;
 }
 
-.header-area > .navber > .navber-toggler * {
+.header-area > .navbar > .navbar-toggler * {
   font-size: 32px;
 }
 
-.header-area > .navber > .navber-toggler {
+.header-area > .navbar > .navbar-toggler {
   float: right;
   height: 70px;
   line-height: 70px;
@@ -109,12 +109,12 @@ ul {
 }
 
 @media (min-width: 992px) {
-  .header-area > .navber > .navber-toggler {
+  .header-area > .navbar > .navbar-toggler {
     display: none;
   }
 }
 
-.header-area > .navber > .navber-menu {
+.header-area > .navbar > .navbar-menu {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   top: 70px;
@@ -125,22 +125,22 @@ ul {
   overflow: hidden;
 }
 
-.header-area > .navber > .navber-menu.show {
+.header-area > .navbar > .navbar-menu.show {
   height: 200px;
 }
 
-.header-area > .navber > .navber-menu > .nav-item {
+.header-area > .navbar > .navbar-menu > .nav-item {
   float: none;
   display: block;
   height: 50px;
   line-height: 50px;
 }
 
-.header-area > .navber > .navber-menu > .nav-item:hover * {
+.header-area > .navbar > .navbar-menu > .nav-item:hover * {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.header-area > .navber > .navber-menu > .nav-item > .nav-link {
+.header-area > .navbar > .navbar-menu > .nav-item > .nav-link {
   display: block;
   padding-left: 50px;
   color: white;
@@ -148,7 +148,7 @@ ul {
 }
 
 @media (min-width: 992px) {
-  .header-area > .navber > .navber-menu {
+  .header-area > .navbar > .navbar-menu {
     position: relative;
     background-color: transparent;
     float: right;
@@ -158,21 +158,21 @@ ul {
     transition: none;
   }
 
-  .header-area > .navber > .navber-menu.show {
+  .header-area > .navbar > .navbar-menu.show {
     height: auto;
   }
 
-  .header-area > .navber > .navber-menu > .nav-item {
+  .header-area > .navbar > .navbar-menu > .nav-item {
     display: inline-block;
     height: 70px;
     line-height: 70px;
   }
 
-  .header-area > .navber > .navber-menu > .nav-item:hover * {
+  .header-area > .navbar > .navbar-menu > .nav-item:hover * {
     background-color: transparent;
   }
 
-  .header-area > .navber > .navber-menu > .nav-item > .nav-link {
+  .header-area > .navbar > .navbar-menu > .nav-item > .nav-link {
     display: block;
     padding: 0 20px;
     color: black;
@@ -719,5 +719,31 @@ section {
 
 .review-area > .container > .review-slide > .rating > span {
   font-size: 14px;
-  clear: orange;
+  color: orange;
+}
+
+/* FOOTER AREA */
+.footer-area {
+  height: auto;
+  text-align: center;
+  background-color: black;
+}
+
+.footer-area * {
+  color: white;
+}
+
+.footer-area > .sns > .item {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.footer-area > .sns > .item > i {
+  font-size: 24px;
+}
+
+.footer-area > .info > p {
+  font-size: 16px;
+  padding: 10px 0;
 }
